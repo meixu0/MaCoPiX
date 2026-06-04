@@ -1,0 +1,65 @@
+name: Build macOS DMG
+
+on:
+  push:
+    branches: [ "main", "master", "dev" ]
+  pull_request:
+    branches: [ "main", "master", "dev" ]
+
+jobs:
+  build-macos:
+    runs-on: macos-14 
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install Dependencies via Homebrew
+      run: |
+        brew update
+        brew install automake autoconf libtool pkg-config
+        brew install gtk+3 gtk-mac-integration pango cairo harfbuzz dylibbundler create-dmg
+
+    - name: Build Binary
+      run: |
+        chmod +x makeosx.sh
+        ./makeosx.sh
+
+    - name: Package App Bundle
+      run: |
+        mkdir -p MaCoPiX.app/Contents/MacOS
+        mkdir -p MaCoPiX.app/Contents/Resources
+        cp src/macopix MaCoPiX.app/Contents/MacOS/
+        cat <<EOF > MaCoPiX.app/Contents/Info.plist
+        <?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+        <plist version="1.0">
+        <dict>
+            <key>CFBundleExecutable</key><string>macopix</string>
+            <key>CFBundleIdentifier</key><string>com.github.macopix</string>
+            <key>CFBundleName</key><string>MaCoPiX</string>
+            <key>CFBundlePackageType</key><string>APPL</string>
+        </dict>
+        </plist>
+        EOF
+
+    - name: Bundle Dylibs
+      run: |
+        dylibbundler -od -b -x MaCoPiX.app/Contents/MacOS/macopix -d MaCoPiX.app/Contents/libs/ -s /opt/homebrew/lib
+
+    - name: Create DMG
+      run: |
+        create-dmg \
+          --volname "MaCoPiX" \
+          --window-pos 200 120 \
+          --window-size 600 400 \
+          --icon-size 100 \
+          --app-drop-link 400 150 \
+          "MaCoPiX.dmg" \
+          "MaCoPiX.app"
+
+    - name: Upload DMG Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: MaCoPiX-macOS-ARM64
+        path: MaCoPiX.dmg
