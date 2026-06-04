@@ -6,14 +6,17 @@
 #include "main.h"
 
 #ifdef USE_OSX
-#include <gdk/gdkquartz.h>
-
+#define GDK_WINDOWING_QUARTZ 1
 #include <Carbon/Carbon.h>
 #import <objc/Object.h>
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
+#include <gtk/gtk.h>
+#include <gdk/gdkquartz.h>
 #import <AppKit/AppKit.h>
 #import <ApplicationServices/ApplicationServices.h>
+
+NSWindow *gdk_quartz_window_get_nswindow(GdkWindow *window);
 
 CFDictionaryRef bounds = NULL;
 

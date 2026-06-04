@@ -126,7 +126,6 @@ extern int errno;
 #endif
 
 /* @@ end of prolog @@ */
-
 #ifdef _LIBC
 /* Rename the non ANSI C functions.  This is required by the standard
    because some ANSI C functions will require linking with this object
@@ -144,13 +143,17 @@ char *getwd ();
 #  if VMS
 #   define getcwd(buf, max) (getcwd) (buf, max, 0)
 #  else
+#   if !defined(__clang__) && !defined(__APPLE__)
 char *getcwd ();
+#   endif
 #  endif
 # endif
 # ifndef HAVE_STPCPY
+#  define stpcpy my_fallback_stpcpy
 static char *stpcpy (char *dest, const char *src);
 # endif
 # ifndef HAVE_MEMPCPY
+#  define mempcpy my_fallback_mempcpy
 static void *mempcpy (void *dest, const void *src, size_t n);
 # endif
 #endif

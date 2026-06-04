@@ -107,18 +107,9 @@ extern char *libintl_dcigettext (const char *__domainname,
 # define W(flag, data) ((flag) ? SWAP (data) : (data))
 #endif
 
-
-#ifdef _LIBC
-# include <byteswap.h>
-# define SWAP(i) bswap_32 (i)
-#else
+#ifndef SWAP
 static inline nls_uint32
-# ifdef __cplusplus
 SWAP (nls_uint32 i)
-# else
-SWAP (i)
-     nls_uint32 i;
-# endif
 {
   return (i << 24) | ((i & 0xff00) << 8) | ((i >> 8) & 0xff00) | (i >> 24);
 }

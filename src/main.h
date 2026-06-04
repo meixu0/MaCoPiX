@@ -124,7 +124,7 @@
 
 // for macOS menu
 #ifdef USE_GTKMACINTEGRATION
-#include<gtkmacintegration/gtkosxapplication.h>
+#include <gtkmacintegration/gtkosxapplication.h>
 #endif
 
 
@@ -199,19 +199,19 @@
 #define MACOPIX_HTTP_ERROR_FORK -6
 
 
-// ¥Ý¥Ã¥×¥¢¥Ã¥×¥á¥Ã¥»¡¼¥¸
+// ï¿½Ý¥Ã¥×¥ï¿½ï¿½Ã¥×¥ï¿½Ã¥ï¿½ï¿½ï¿½ï¿½ï¿½
 #define GTK_MSG
 
-// ¥Þ¥¹¥³¥Ã¥È¥Õ¥¡¥¤¥ëÍÑ³ÈÄ¥»Ò
+// ï¿½Þ¥ï¿½ï¿½ï¿½ï¿½Ã¥È¥Õ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ³ï¿½Ä¥ï¿½ï¿½
 #define MASCOT_EXTENSION "*.mcpx"
 
-// ¥á¥Ë¥å¡¼¥Õ¥¡¥¤¥ëÍÑ³ÈÄ¥»Ò
+// ï¿½ï¿½Ë¥å¡¼ï¿½Õ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ³ï¿½Ä¥ï¿½ï¿½
 #define MENU_EXTENSION "*.menu"
 
-// LZH¥Õ¥¡¥¤¥ëÍÑ³ÈÄ¥»Ò
+// LZHï¿½Õ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ³ï¿½Ä¥ï¿½ï¿½
 #define LZH_EXTENSION "*.lzh"
 
-// tar.gz¥Õ¥¡¥¤¥ëÍÑ³ÈÄ¥»Ò
+// tar.gzï¿½Õ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ³ï¿½Ä¥ï¿½ï¿½
 #define TAR_EXTENSION "*.tar.gz"
 
 #define MENU_EXTRACT_GTAR_COMMAND "tar -zxf %s -C %s "
@@ -224,26 +224,26 @@ enum MENU_EXT_t { MENU_MENU,
 extern enum MENU_EXT_t MENU_EXT;
 
 
-// ²èÁü¥Õ¥¡¥¤¥ëÍÑ³ÈÄ¥»Ò
+// ï¿½ï¿½ï¿½ï¿½ï¿½Õ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ³ï¿½Ä¥ï¿½ï¿½
 #define PNG_EXTENSION "*.png"
 #define GIF_EXTENSION "*.gif"
 #define XPM_EXTENSION "*.xpm"
 
-// ¥ê¥½¡¼¥¹¥Õ¥¡¥¤¥ëÍÑ³ÈÄ¥»Ò
+// ï¿½ê¥½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ³ï¿½Ä¥ï¿½ï¿½
 #ifdef USE_WIN32
 #define RC_EXTENSION "*.ini"
 #else
 #define RC_EXTENSION "*.rc"
 #endif
 
-// ¤Î¤Ã¤«¤ê¥­¥ã¥éÄêµÁ¥Õ¥¡¥¤¥ëÍÑ³ÈÄ¥»Ò
+// ï¿½Î¤Ã¤ï¿½ï¿½ê¥­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ³ï¿½Ä¥ï¿½ï¿½
 #define NKR_EXTENSION "*.ini"
 
-// ¤Î¤Ã¤«¤ê¥­¥ã¥éÍÑ BMP¥Õ¥¡¥¤¥ë³ÈÄ¥»Ò
+// ï¿½Î¤Ã¤ï¿½ï¿½ê¥­ï¿½ï¿½ï¿½ï¿½ï¿½ BMPï¿½Õ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¥ï¿½ï¿½
 #define BMP_EXTENSION "*.bmp"
 
-// ¸Ä¿ÍÍÑÀßÄê¥»¡¼¥Ö¥Ç¥£¥ì¥¯¥È¥ê
-//  (home¤Î¤·¤¿¤«¤é¤ÎÁêÂÐ¥Ç¥£¥ì¥¯¥È¥ê)
+// ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê¥»ï¿½ï¿½ï¿½Ö¥Ç¥ï¿½ï¿½ì¥¯ï¿½È¥ï¿½
+//  (homeï¿½Î¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¥Ç¥ï¿½ï¿½ì¥¯ï¿½È¥ï¿½)
 #ifdef USE_WIN32
 #define USER_DIR "UserData" G_DIR_SEPARATOR_S
 #else
@@ -260,23 +260,23 @@ enum MaCoPiXFolder_t { FOLDER_DEFAULT,
 };
 extern enum MaCoPiXFolder_t MaCoPiXFolder;
 
-// ¸Ä¿ÍÍÑ¥»¡¼¥Ö¥Õ¥¡¥¤¥ë
-//  (USER_DIRÃæ¤ËºîÀ® : ¥Þ¥¹¥³¥Ã¥ÈÈó°ÍÂ¸¥Ñ¥é¥á¡¼¥¿¤òÊÝÂ¸)
+// ï¿½Ä¿ï¿½ï¿½Ñ¥ï¿½ï¿½ï¿½ï¿½Ö¥Õ¥ï¿½ï¿½ï¿½ï¿½ï¿½
+//  (USER_DIRï¿½ï¿½Ëºï¿½ï¿½ï¿½ : ï¿½Þ¥ï¿½ï¿½ï¿½ï¿½Ã¥ï¿½ï¿½ï¿½ï¿½Â¸ï¿½Ñ¥ï¿½á¡¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¸)
 #ifdef USE_WIN32
 #define USER_RCFILE "macopix.ini"
 #else
 #define USER_RCFILE "macopix.rc"
 #endif
 
-// ¥«¥Æ¥´¥ê¡¼¿·µ¬ºîÀ®»þ¤Î¥Æ¥ó¥Ý¥é¥ê¥Í¡¼¥à
+// ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½ê¡¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¥Æ¥ï¿½Ý¥ï¿½ï¿½Í¡ï¿½ï¿½ï¿½
 #define TMP_CATEGORY_NAME "(New Category)"
 
-// ¥Þ¥¹¥³¥Ã¥È¤Î¥Ç¥Õ¥©¥ë¥È¥³¡¼¥É
+// ï¿½Þ¥ï¿½ï¿½ï¿½ï¿½Ã¥È¤Î¥Ç¥Õ¥ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½ï¿½
 #define DEF_CODE1 "EUC-JP"
 #define DEF_CODE2 "SJIS-WIN"
 
 
-// ¥Õ¥©¥ó¥È
+// ï¿½Õ¥ï¿½ï¿½ï¿½ï¿½
 #ifdef USE_WIN32
 #define FONT_CLK "arial bold 9"
 #define FONT_BAL "ms pgothic 9"
@@ -289,7 +289,7 @@ extern enum MaCoPiXFolder_t MaCoPiXFolder;
 #endif
 
 
-// »þ·×¹¹¿·»þ´Ö [msec]
+// ï¿½ï¿½ï¿½×¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ [msec]
 #define INTERVAL 100
 
 
@@ -327,8 +327,8 @@ extern enum ClockMode_t ClockMode;
 #define INIT_BAL_BORDER 1
 
 
-// Home Position »ØÄê»þ¤Î¥ª¥Õ¥»¥Ã¥È
-//  OS, Wndow Manager, X¤ÎVersion¤ÇÊÑ²½¤¹¤ë¤«¤â?
+// Home Position ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¥ï¿½ï¿½Õ¥ï¿½ï¿½Ã¥ï¿½
+//  OS, Wndow Manager, Xï¿½ï¿½Versionï¿½ï¿½ï¿½Ñ²ï¿½ï¿½ï¿½ï¿½ë¤«ï¿½ï¿½?
 #define ROOTOFF_X 0
 #define ROOTOFF_Y (-10)
 
@@ -356,11 +356,11 @@ enum MAC_LAYER_MODE_t {
 extern enum MAC_LAYER_MODE_t MAC_LAYER_MODE;
 #endif
 
-// Focus Follow ´ð½à°ÌÃÖ
+// Focus Follow ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 enum FFPos_t { FF_SIDE_LEFT, FF_SIDE_RIGHT };
 extern enum FFPos_t FFPos;
 
-// Focus Autobar ¥¿¥¤¥È¥ë¥Ð¡¼»»½ÐË¡
+// Focus Autobar ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½Ë¡
 enum AutoBar_t { AUTOBAR_MANUAL, AUTOBAR_ORDINAL, AUTOBAR_COMPIZ };
 extern enum AutoBar_t AutoBar;
 
@@ -382,25 +382,25 @@ enum TypBalloon_t {BALLOON_NORMAL,
        };
 extern enum TypBalloon_t TypBalloon;
 
-// BiffÍÑ Balloon¤Î¼«Á³¾ÃÌÇ¥³¥Þ¿ô
+// Biffï¿½ï¿½ Balloonï¿½Î¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¥ï¿½ï¿½Þ¿ï¿½
 #define BALLOON_EXPIRE    150
 
-// SocketÍÑ Balloon¤Î¼«Á³¾ÃÌÇ¥³¥Þ¿ô
+// Socketï¿½ï¿½ Balloonï¿½Î¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¥ï¿½ï¿½Þ¿ï¿½
 #define SOCK_BALLOON_EXPIRE    100
 
-// Sockmsg¡¡¤Ç¤Õ¤­¤À¤·¤ò¥¿¥¤¥Ô¥ó¥°É÷¤Ë¤¹¤ë¤«¤É¤¦¤«
+// Sockmsgï¿½ï¿½ï¿½Ç¤Õ¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò¥¿¥ï¿½ï¿½Ô¥ï¿½ï¿½ï¿½ï¿½Ë¤ï¿½ï¿½ë¤«ï¿½É¤ï¿½ï¿½ï¿½
 typedef enum {
   SOCK_NORMAL,
   SOCK_STEPPING
 } SockMsgType;
 
-// Sockmsg ¥¿¥¤¥Ô¥ó¥°¤Ç¤Î¥³¥Þ´Ö³Ö
+// Sockmsg ï¿½ï¿½ï¿½ï¿½ï¿½Ô¥ó¥°¤Ç¤Î¥ï¿½ï¿½Þ´Ö³ï¿½
 #define SOCK_INTERVAL    1
 
-// SysÍÑ Balloon¤Î¼«Á³¾ÃÌÇ¥³¥Þ¿ô
+// Sysï¿½ï¿½ Balloonï¿½Î¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¥ï¿½ï¿½Þ¿ï¿½
 #define SYS_BALLOON_EXPIRE    50
 
-// ¥Þ¥¹¥³¥Ã¥ÈSocket¤ÎÈ¿±þ¥Ç¥£¥ì¥¤ ¥³¥Þ¿ô
+// ï¿½Þ¥ï¿½ï¿½ï¿½ï¿½Ã¥ï¿½Socketï¿½ï¿½È¿ï¿½ï¿½ï¿½Ç¥ï¿½ï¿½ì¥¤ ï¿½ï¿½ï¿½Þ¿ï¿½
 #define DEF_DUET_DELAY    20
 
 // Duet Anime mode
@@ -418,7 +418,7 @@ enum TypInterpolate_t {	 MAG_IP_NEAREST,
 	   };
 extern enum TypInterpolate_t TypInterpolate;
 
-//Clock ¥¿¥¤¥×
+//Clock ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 enum ClockType_t { CLOCK_TYPE_24S, 
 	CLOCK_TYPE_24M, 
 	CLOCK_TYPE_12S, 
@@ -640,7 +640,7 @@ extern enum MailStatus_t MailStatus;
 #define SMENU_WIN_WIDTH  500  // Size of SMENU Window
 #define SMENU_WIN_HEIGHT 200
 
-// ¥«¡¼¥½¥ë
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #define CURSOR_NORMAL   GDK_TCROSS
 #define CURSOR_PUSH     GDK_CROSS_REVERSE
 #define CURSOR_DRAG_H   GDK_SB_H_DOUBLE_ARROW
@@ -648,11 +648,11 @@ extern enum MailStatus_t MailStatus;
 #define CURSOR_BIFF     GDK_QUESTION_ARROW
 #define CURSOR_CLK      GDK_ARROW
 
-// ¥¨¥é¡¼¥Ý¥Ã¥×¥¢¥Ã¥×¤Î¥¿¥¤¥à¥¢¥¦¥È[sec]
+// ï¿½ï¿½ï¿½é¡¼ï¿½Ý¥Ã¥×¥ï¿½ï¿½Ã¥×¤Î¥ï¿½ï¿½ï¿½ï¿½à¥¢ï¿½ï¿½ï¿½ï¿½[sec]
 #define POPUP_TIMEOUT 2
 
 
-// »þÊóÍÑÀßÄê
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 enum SignalAction_t { SIGACT_NO, SIGACT_CLICK, SIGACT_CHANGE };
 extern enum SignalAction_t SignalAction;
 
@@ -661,7 +661,7 @@ extern enum SignalAction_t SignalAction;
 enum ConsMode_t { CONS_MANUAL, CONS_AUTOOW, CONS_IGNORE };
 extern enum ConsMode_t ConsMode;
 
-// ¥á¥Ë¥å¡¼¤Î¾ì½ê
+// ï¿½ï¿½Ë¥å¡¼ï¿½Î¾ï¿½ï¿½
 enum ScanMenuDir_t { SMENU_DIR_COMMON, SMENU_DIR_USER };
 extern enum ScanMenuDir_t ScanMenuDir;
 
@@ -689,11 +689,11 @@ extern enum CompositeFlag_t CompositeFlag;
 
 
 
-// ¥é¥ó¥À¥àÀ¸À®ÍÑ´Ø¿ô
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´Ø¿ï¿½
 #define RANDOMIZE() srand(time(NULL)+getpid())
 #define RANDOM(x)  (rand()%(x))
 
-// ¥Ö¥í¥Ã¥¯¥ë¡¼¥×ÍÑ¹½Â¤ÂÎ
+// ï¿½Ö¥ï¿½ï¿½Ã¥ï¿½ï¿½ë¡¼ï¿½ï¿½ï¿½Ñ¹ï¿½Â¤ï¿½ï¿½
 typedef struct{
   int next;
   int seq;
@@ -703,7 +703,7 @@ typedef struct{
 }BlockLoop;
 
 
-// ²èÁü¥Õ¥¡¥¤¥ëÍÑ¹½Â¤ÂÎ
+// ï¿½ï¿½ï¿½ï¿½ï¿½Õ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½Â¤ï¿½ï¿½
 typedef struct{
   //gchar **xpm_data;
   gchar *filename;
@@ -722,7 +722,7 @@ typedef struct{
 #endif
 }typSprite;
 
-// ¤Õ¤¿¤Ä¤Îglong¹½Â¤ÂÎ¡¡(x,y) (w,h)¤Ê¤É
+// ï¿½Õ¤ï¿½ï¿½Ä¤ï¿½glongï¿½ï¿½Â¤ï¿½Î¡ï¿½(x,y) (w,h)ï¿½Ê¤ï¿½
 typedef struct{
   glong x;
   glong y;
@@ -730,7 +730,7 @@ typedef struct{
 }MyXY;
 
 
-// ¥«¡¼¥½¥ë¹½Â¤ÂÎ
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë¹½Â¤ï¿½ï¿½
 typedef struct _typCursor typCursor;
 struct _typCursor{
   GdkCursor *normal;
@@ -741,7 +741,7 @@ struct _typCursor{
   GdkCursor *clk;
 };
 
-// »þÊóÍÑ¹½Â¤ÂÎ
+// ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½Â¤ï¿½ï¿½
 typedef struct _typSignal typSignal;
 struct _typSignal{
   gint type;
@@ -749,7 +749,7 @@ struct _typSignal{
   gboolean flag;
 };
 
-// PangoCairo FontÊÑ´¹ÍÑ
+// PangoCairo Fontï¿½Ñ´ï¿½ï¿½ï¿½
 typedef struct _myPangoCairo myPangoCairo;
 struct _myPangoCairo{
   gchar *family;
@@ -758,7 +758,7 @@ struct _myPangoCairo{
   cairo_font_weight_t weight;
 };
 
-// ¥á¥Ë¥å¡¼¥¹¥­¥ã¥óÍÑ¹½Â¤ÂÎ
+// ï¿½ï¿½Ë¥å¡¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½Â¤ï¿½ï¿½
 typedef struct _typScanMenu typScanMenu;
 struct _typScanMenu{
   gchar *file[MAX_MENU_CATEGORY2];
@@ -769,7 +769,7 @@ struct _typScanMenu{
   gint  max_menu;
 };
 
-// ¥á¥¤¥ëÍÑ¹½Â¤ÂÎ
+// ï¿½á¥¤ï¿½ï¿½ï¿½Ñ¹ï¿½Â¤ï¿½ï¿½
 typedef struct _typMail typMail;
 struct _typMail{
   gboolean flag;
@@ -1139,13 +1139,13 @@ struct _typMascot{
 };
 
 
-// GUIÍÑ¹½Â¤ÂÎ 1
+// GUIï¿½Ñ¹ï¿½Â¤ï¿½ï¿½ 1
 typedef struct{
   typMascot *mascot;
   gint num;
 }confNum;
 
-// GUIÍÑ¹½Â¤ÂÎ 2
+// GUIï¿½Ñ¹ï¿½Â¤ï¿½ï¿½ 2
 typedef struct{
   typMascot *mascot;
   gint num;
@@ -1441,7 +1441,7 @@ gint ssl_write();
 
 // macOS
 #ifdef USE_OSX
-void MacSetWidgetLayer();
+void MacSetWidgetLayer(GtkWidget *w, gboolean top_flag);
 void MacSetLayer();
 void MacMapWin();
 void MacGetFocusWin();
