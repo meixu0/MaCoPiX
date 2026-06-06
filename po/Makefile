@@ -104,7 +104,7 @@ INSTOBJEXT = .mo
 	$(MSGMERGE) $< $(srcdir)/$(GETTEXT_PACKAGE).pot -o $*.pox
 
 .po.mo:
-	$(MSGFMT) -x objective-c -c -o $@ $<
+	$(MSGFMT) -c -o $@ $<
 
 .po.gmo:
 	file=$(srcdir)/`echo $* | sed 's,.*/,,'`.gmo \
