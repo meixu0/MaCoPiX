@@ -73,9 +73,13 @@ jobs:
         
         mkdir -p "$APP_DIR/Contents/libs"
         
+        find /opt/homebrew -name "libgtkmacintegration-gtk3*.dylib" -exec cp -L {} "$APP_DIR/Contents/libs/" \;
+        
         SEARCH_PATHS="-s /opt/homebrew/lib -s /opt/homebrew/Cellar -s /opt/homebrew/opt"
         
         dylibbundler -od -b -x "$APP_DIR/Contents/MacOS/macopix-bin" -d "$APP_DIR/Contents/libs/" $SEARCH_PATHS
+        
+        dylibbundler -od -b -x "$APP_DIR/Contents/libs/libgtkmacintegration-gtk3.4.dylib" -d "$APP_DIR/Contents/libs/" $SEARCH_PATHS
         
         for loader in "$APP_DIR/Contents/Resources/lib/gdk-pixbuf-2.0/2.10.0/loaders/"*.so; do
           dylibbundler -od -b -x "$loader" -d "$APP_DIR/Contents/libs/" $SEARCH_PATHS
