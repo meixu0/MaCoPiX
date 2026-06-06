@@ -18,7 +18,7 @@ jobs:
       run: |
         brew update
         brew install automake autoconf libtool pkg-config
-        brew install gtk+3 gtk-mac-integration pango cairo harfbuzz librsvg
+        brew install gtk+3 gtk-mac-integration pango cairo harfbuzz librsvg shared-mime-info
         brew install dylibbundler create-dmg
 
     - name: Build Binary
@@ -42,6 +42,8 @@ jobs:
         
         cp -r /opt/homebrew/share/icons/hicolor "$APP_DIR/Contents/Resources/share/icons/" || true
         cp -r /opt/homebrew/share/icons/Adwaita "$APP_DIR/Contents/Resources/share/icons/" || true
+        
+        cp -r /opt/homebrew/share/mime "$APP_DIR/Contents/Resources/share/" || true
         
         cat /opt/homebrew/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache | sed 's|/opt/homebrew/lib/gdk-pixbuf-2.0/2.10.0/loaders/||g' > "$APP_DIR/Contents/Resources/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache"
         
